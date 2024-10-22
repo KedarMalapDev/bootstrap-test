@@ -1,0 +1,95 @@
+// Base Colors
+$info: #97ecff;
+$info-hover: #57d0eb;
+
+$primary: #133742;
+$primary-hover: #133742;
+
+$secondary: #cbf5a6;
+$secondary-hover: #d6f9b8;
+
+// Button styles
+.btn {
+  border: none;
+  transition: background-color 0.3s ease;
+  box-shadow: none !important; // Remove any Bootstrap shadows
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  transition: gap 0.3s ease; // Smooth transition for gap changes
+
+  svg {
+    transition: transform 0.3s ease; // Smooth transition for the image
+  }
+
+  &:hover {
+    gap: 1rem; // Increase gap (equivalent to gap-3)
+
+    svg {
+      transform: translateX(5px); // Move the arrow forward (adjust as needed)
+    }
+  }
+
+  &:focus {
+    box-shadow: none !important; // Remove focus shadow
+  }
+
+  // Solid Button States
+  &.btn-info {
+    background-color: $info;
+    color: #133742;
+
+    &:hover {
+      background-color: $info-hover;
+      color: #133742;
+    }
+  }
+
+  // Primary Button Styles
+  &.btn-primary {
+    background-color: $primary;
+    color: #ebffdb; // Adjust text color as needed
+
+    &:hover {
+      background-color: $primary-hover;
+      color: #d6f9b8; // Keep text color on hover
+    }
+  }
+
+  // Secondary Button Styles
+  &.btn-secondary {
+    background-color: $secondary;
+    color: #133742; // Adjust text color as needed
+
+    &:hover {
+      background-color: $secondary-hover;
+      color: #133742; // Keep text color on hover
+    }
+  }
+
+  // Remove any active state shadows
+  &:active {
+    box-shadow: none !important;
+  }
+}
+
+// Override form-control related variables
+$input-border-color: #ff5722; // Change the input border color
+$input-border-radius: 8px; // Change border radius of inputs
+$input-padding-y: 0.75rem; // Vertical padding
+$input-padding-x: 1.25rem; // Horizontal padding
+$input-color: #333; // Text color inside inputs
+$input-bg: #f0f0f0; // Background color of inputs
+$input-focus-border-color: #007bff; // Input border color on focus
+$input-focus-box-shadow: 0 0 5px rgba(0, 123, 255, 0.25); // Shadow on focus
+
+// Spacing
+$spacer: 1rem;
+$spacers: (
+  0: 0,
+  1: $spacer * 0.25,
+  2: $spacer * 0.5,
+  3: $spacer,
+  4: $spacer * 1.5,
+  5: $spacer * 1.25,
+);
